@@ -3,22 +3,20 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "TODO_pkg_name"
+name = "demojavaparser"
 dynamic = ["version"]
 description = "TODO_description"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
-authors = [{ name = "TODO_your_name", email = "TODO_your@email.com" }]
+authors = [{ name = "Pengyu Nie", email = "prodigy.sov@gmail.com" }]
 # TODO: select the appropriate classifiers on https://pypi.org/classifiers/
 classifiers = [
     "Programming Language :: Python :: 3.8",
     "License :: OSI Approved :: MIT License",
     "Operating System :: POSIX :: Linux",
 ]
-dependencies = [
-# TODO: add dependencies, e.g., "seutil>=0.8.8",
-]
+dependencies = ["seutil"]
 
 [project.optional-dependencies]
 dev = ["hatch", "pytest>=6", "pytest-cov", "coverage[toml]", "black", "ruff"]
@@ -30,18 +28,18 @@ Issues = "https://github.com/TODO_user_name/TODO_repo_name/issues"
 Source = "https://github.com/TODO_user_name/TODO_repo_name"
 
 [tool.hatch.version]
-path = "src/TODO_pkg_name/__about__.py"
+path = "src/demojavaparser/__about__.py"
 
 # testing (pytest) and coverage (coverage, pytest-cov)
 [tool.coverage.run]
-source_pkgs = ["TODO_pkg_name", "tests"]
+source_pkgs = ["demojavaparser", "tests"]
 branch = true
 parallel = true
-omit = ["src/TODO_pkg_name/__about__.py"]
+omit = ["src/demojavaparser/__about__.py"]
 
 [tool.coverage.paths]
-TODO_pkg_name = ["src/TODO_pkg_name", "*/TODO_pkg_name/src/TODO_pkg_name"]
-tests = ["tests", "*/TODO_pkg_name/tests"]
+demojavaparser = ["src/demojavaparser", "*/demojavaparser/src/demojavaparser"]
+tests = ["tests", "*/demojavaparser/tests"]
 
 [tool.coverage.report]
 exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
@@ -66,4 +64,4 @@ select = [
 ]
 
 [tool.ruff.isort]
-known-first-party = ["TODO_pkg_name"]
+known-first-party = ["demojavaparser"]
